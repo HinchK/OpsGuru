@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: OpsGuru
+        psr4_prefix: OpsGuru
+        src_path: app

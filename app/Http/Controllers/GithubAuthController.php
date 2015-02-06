@@ -2,7 +2,6 @@
 
 
 use Socialize;
-use Symfony\Component\HttpFoundation\Request;
 
 class GithubAuthController extends Controller{
 
@@ -17,8 +16,8 @@ class GithubAuthController extends Controller{
     {
         $user = Socialize::with('github')->user();
 
-        \Debugbar::warn("handling provider callback");
-        \Debugbar::warn($user->getName());
+        info("handling provider callback");
+        info($user->getName());
 
         return view('dash', compact('user'));
 

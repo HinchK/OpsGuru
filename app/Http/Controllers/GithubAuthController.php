@@ -1,6 +1,7 @@
 <?php namespace OpsGuru\Http\Controllers;
 
 
+use Auth;
 use Socialize;
 
 class GithubAuthController extends Controller{
@@ -17,9 +18,11 @@ class GithubAuthController extends Controller{
         $user = Socialize::with('github')->user();
 
         info("handling provider callback");
-        info($user->getName());
+        info($user->getName() . " | " . $user->getNickName());
 
-        return view('dash', compact('user'));
+        Auth::check() ? $authenticated = true : $authenticated = false;
+
+        return view('dash', compact('user', 'authenticated'));
 
     }
 

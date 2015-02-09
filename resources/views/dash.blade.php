@@ -26,8 +26,8 @@
 			}
 
 			.title {
-				font-size: 96px;
-				margin-bottom: 40px;
+				font-size: 72px;
+				margin-bottom: 30px;
 			}
 
 			.quote {
@@ -38,10 +38,19 @@
 	<body>
 		<div class="container">
 			<div class="content">
-                <img src="{{ $user->getAvatar() }}">
+                <div class="row">
+                    <img src="{{ $user->getAvatar() }}" class="img circle">
 
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
+                    <div class="title">Welcome, to Laravel 5</div>
+                    <div class="quote">{{ Inspiring::quote() }}</div>
+                </div>
+                <div class="row">
+                    @if($authenticated === true)
+                        <h4>{{ $user->getNickname() }} is Authenticated</h4>
+                    @else
+                        <h3>{{ $user->getNickname() }} has not been Authenticated...</h3>
+                    @endif
+                </div>
 			</div>
 		</div>
 	</body>

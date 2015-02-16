@@ -1,7 +1,7 @@
 <?php
 /**
  * An helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.0.2 on 2015-02-09.
+ * Generated for Laravel 5.0.5 on 2015-02-16.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -5008,7 +5008,7 @@ namespace {
         }
         
         /**
-         * Set the default passwork work factor.
+         * Set the default password work factor.
          *
          * @param int $rounds
          * @return $this 
@@ -9702,7 +9702,7 @@ namespace {
         }
         
         /**
-         * Call the given route's before filters.
+         * Call the given route's after filters.
          *
          * @param \Illuminate\Routing\Route $route
          * @param \Illuminate\Http\Request $request

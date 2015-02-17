@@ -60,8 +60,9 @@
                 <div class="row">
                     @if($authenticated === true)
                         <h4>{{ $user->getNickname() }} is Authenticated</h4>
+                        <p>continue to <a href="/home">home</a></p>
                     @else
-                        <h3>Welcome, {{ $user->getNickname() }} ... papers please!.</h3>
+                        <h3>Welcome, {{ $user->getNickname() }}, you don't appear to be a member of the ORG ... papers please!.</h3>
                         <div class="panel-body">
                             @if (count($errors) > 0)
                                 <div class="alert alert-danger">

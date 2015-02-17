@@ -152,6 +152,7 @@ return [
 		'OpsGuru\Providers\EventServiceProvider',
 		'OpsGuru\Providers\RouteServiceProvider',
         'Laravel\Socialite\SocialiteServiceProvider',
+        'GrahamCampbell\GitHub\GitHubServiceProvider',
 
 	],
 
@@ -206,6 +207,7 @@ return [
          */
         'Debugbar' => 'Barryvdh\Debugbar\Facade',
         'Socialize' => 'Laravel\Socialite\Facades\Socialite',
+        'GitHub' => 'GrahamCampbell\GitHub\Facades\GitHub',
 	],
 
 ];

@@ -3,3 +3,6 @@
 /.idea
 composer.lock
 .env
+
+public/dist
+public/plugins

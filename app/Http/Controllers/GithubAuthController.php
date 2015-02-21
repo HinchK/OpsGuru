@@ -21,7 +21,7 @@ class GithubAuthController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function handleProviderCallback()
+    public function handleProviderCallback(UserRepository $repository)
     {
         $user = Socialize::with('github')->user();
 
@@ -37,7 +37,7 @@ class GithubAuthController extends Controller {
             if($org['login'] === 'FoxyCart')
             {
                 info('FoxyCart user verified...');
-                $opsUser = UserRepository::findByUserNameOrCreate($user);
+                $opsUser = $repository->findByUsernameOrCreate($user);
                 Auth::login($opsUser);
             }
         }

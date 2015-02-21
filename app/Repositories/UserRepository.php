@@ -10,9 +10,10 @@ class UserRepository {
     public function findByUsernameOrCreate($userData)
     {
         return User::firstOrCreate([
-            'username' => $userData->nickname,
-            'email'    => $userData->email,
-            'avatar'   => $userData->avatar
+            'username' => $userData->getNickName(),
+            'email' => $userData->getEmail(),
+            'avatar' => $userData->getAvatar(),
+            'access_token' => $userData->token
         ]);
     }
 

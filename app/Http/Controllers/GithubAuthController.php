@@ -3,10 +3,10 @@
 
 use Auth;
 use GrahamCampbell\GitHub\Facades\GitHub;
+use OpsGuru\Repositories\UserRepository;
 use Socialize;
-use OpsGuru\User;
 
-class GithubAuthController extends Controller{
+class GithubAuthController extends Controller {
 
     public function login()
     {
@@ -18,7 +18,6 @@ class GithubAuthController extends Controller{
     /**
      * Handle the callback -
      * log in or create the auth'd user
-     * TODO: team check foxycart
      *
      * @return \Illuminate\View\View
      */
@@ -34,16 +33,11 @@ class GithubAuthController extends Controller{
 
         foreach($orgs as $org)
         {
-            info("Orgs test: " . $org['login']);
+            info("Github Orgs lookup: " . $org['login']);
             if($org['login'] === 'FoxyCart')
             {
                 info('FoxyCart user verified...');
-                $opsUser = User::firstOrCreate([
-                    'username' => $user->getNickName(),
-                    'email' => $user->getEmail(),
-                    'avatar' => $user->getAvatar(),
-                    'access_token' => $user->token
-                ]);
+                $opsUser = UserRepository::findByUserNameOrCreate($user);
                 Auth::login($opsUser);
             }
         }

@@ -1,7 +1,6 @@
 <?php namespace OpsGuru\Commands;
 
-abstract class Command {
-
-	//
-
+abstract class Command
+{
+    //
 }

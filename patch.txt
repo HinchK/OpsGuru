@@ -397,7 +397,7 @@ index 629d1107fc6a038c74e0e3e75ea664dd1dbe73ba..e3e09895a04f4a03de1d90ec1e365f5c
 +    use DispatchesCommands, ValidatesRequests;
  }
 diff --git a/app/Http/Controllers/GithubAuthController.php b/app/Http/Controllers/GithubAuthController.php
-index 2358dfa3ac80447748574086aa72b2ff998eb02e..fb1a446b93a1b677fffbe54be6e395f65a1adc8f 100644
+index 95782929ea75c9c6c5a11fdd204a8654ec8db0b3..3f03ef82656ba3a74ddd9f5ff3f3a84fbca65615 100644
 --- a/app/Http/Controllers/GithubAuthController.php
 +++ b/app/Http/Controllers/GithubAuthController.php
 @@ -1,23 +1,20 @@
@@ -448,7 +448,7 @@ index 2358dfa3ac80447748574086aa72b2ff998eb02e..fb1a446b93a1b677fffbe54be6e395f6
 +            info("Github Orgs lookup: ".$org['login']);
 +            if ($org['login'] === 'FoxyCart') {
                  info('FoxyCart user verified...');
-                 $opsUser = UserRepository::findByUserNameOrCreate($user);
+                 $opsUser = $repository->findByUsernameOrCreate($user);
                  Auth::login($opsUser);
 @@ -47,7 +42,5 @@ class GithubAuthController extends Controller {
          Auth::check() ? $authenticated = true : $authenticated = false;

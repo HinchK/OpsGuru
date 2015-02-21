@@ -1,7 +1,6 @@
 <?php namespace OpsGuru\Events;
 
-abstract class Event {
-
-	//
-
+abstract class Event
+{
+    //
 }

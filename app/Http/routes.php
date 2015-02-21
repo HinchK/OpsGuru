@@ -20,6 +20,6 @@ Route::get('home', 'HomeController@index');
 Route::get('login', ['as' => 'login_path', 'uses' => 'GithubAuthController@login']);
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+    'auth'     => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
 ]);

@@ -1,13 +1,15 @@
 <?php namespace OpsGuru\Providers;
 
+
 use Laravel\Socialite\Two\AbstractProvider;
 use Laravel\Socialite\Two\ProviderInterface;
 use Laravel\Socialite\Two\User;
 
 class FoxyApiProvider extends AbstractProvider implements ProviderInterface
 {
+
     /**
-     * Scopes.
+     * Scopes
      *
      * @var string
      */
@@ -20,8 +22,7 @@ class FoxyApiProvider extends AbstractProvider implements ProviderInterface
     /**
      * Get the authentication URL for the provider.
      *
-     * @param string $state
-     *
+     * @param  string $state
      * @return string
      */
     protected function getAuthUrl($state)
@@ -45,8 +46,8 @@ class FoxyApiProvider extends AbstractProvider implements ProviderInterface
     public function getAccessToken($code)
     {
         $response = $this->getHttpClient()->get($this->getTokenUrl(), [
-            'headers' => ['Authorization'        => 'Basic '.base64_encode($this->clientId.':'.$this->clientSecret),
-                          'FOXYCART-API-VERSION' => '1', ],
+            'headers' => ['Authorization' => 'Basic ' . base64_encode($this->clientId . ':' . $this->clientSecret),
+                          'FOXYCART-API-VERSION' => '1'],
             'body'    => $this->getTokenFields($code),
         ]);
         dd($response);
@@ -66,11 +67,11 @@ class FoxyApiProvider extends AbstractProvider implements ProviderInterface
 
     protected function createUserByToken($token)
     {
-        $response = $this->getHttpClient()->post('https://api-sandbox.foxycart.com/users', [
+        $response = $this->getHttpClient()->post('https://api-sandbox.foxycart.com/users',[
             'headers' => [
-                'Authorization'        => 'Bearer '.$token,
-                'CONTENT_TYPE'         => 'application/json',
-                'FOXYCART-API-VERSION' => '1',
+                'Authorization' => 'Bearer ' . $token,
+                'CONTENT_TYPE' => 'application/json',
+                'FOXYCART-API-VERSION' => '1'
             ],
         ]);
 
@@ -80,17 +81,17 @@ class FoxyApiProvider extends AbstractProvider implements ProviderInterface
     /**
      * Get the raw user for the given access token.
      *
-     * @param string $token
-     *
+     * @param  string $token
      * @return array
      */
     protected function getUserByToken($token)
     {
+
         $response = $this->getHttpClient()->get('https://api-sandbox.foxycart.com/client', [
             'headers' => [
-                'Authorization'        => 'Bearer '.$token,
-                'CONTENT_TYPE'         => 'application/json',
-                'FOXYCART-API-VERSION' => '1',
+                'Authorization' => 'Bearer ' . $token,
+                'CONTENT_TYPE' => 'application/json',
+                'FOXYCART-API-VERSION' => '1'
             ],
         ]);
 
@@ -110,13 +111,12 @@ class FoxyApiProvider extends AbstractProvider implements ProviderInterface
     /**
      * Map the raw user array to a Socialite User instance.
      *
-     * @param array $user
-     *
+     * @param  array $user
      * @return \Laravel\Socialite\Two\User
      */
     protected function mapUserToObject(array $user)
     {
-        return (new User())->setRaw($user)->map([
+        return (new User)->setRaw($user)->map([
             'id'       => $user['id'],
             'nickname' => $user['display_name'],
             'name'     => $user['display_name'],

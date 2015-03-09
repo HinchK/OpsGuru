@@ -1,7 +1,7 @@
 <?php
 /**
  * An helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.0.14 on 2015-03-09.
+ * Generated for Laravel 5.0.13 on 2015-02-27.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -3312,7 +3312,7 @@ namespace {
          * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator 
          * @static 
          */
-        public static function paginate($perPage = null, $columns = array()){
+        public static function paginate($perPage = 15, $columns = array()){
             return \Illuminate\Database\Eloquent\Builder::paginate($perPage, $columns);
         }
         
@@ -4822,17 +4822,6 @@ namespace {
          */
         public static function type($path){
             return \Illuminate\Filesystem\Filesystem::type($path);
-        }
-        
-        /**
-         * Get the mime-type of a given file.
-         *
-         * @param string $path
-         * @return string|false 
-         * @static 
-         */
-        public static function mimeType($path){
-            return \Illuminate\Filesystem\Filesystem::mimeType($path);
         }
         
         /**

@@ -16,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
             'foxyapi',
             function ($app) use ($socialite) {
                 $config = $app['config']['services.foxyapi'];
+
                 return $socialite->buildProvider(FoxyApiProvider::class, $config);
             }
         );

@@ -17,11 +17,13 @@ Route::get('dash', 'GithubAuthController@handleProviderCallback');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('cart', 'DevCartController@index');
+
 Route::get('login', ['as' => 'login_path', 'uses' => 'GithubAuthController@login']);
 
-$router->get('foxyapi/login', ['as' => 'foxyapi/login', 'uses' => 'FoxyApiController@redirectToProvider']);
+Route::get('foxyapi/login', ['as' => 'foxyapi/login', 'uses' => 'FoxyApiController@redirectToProvider']);
 
-$router->get('foxyapi_callback', ['as' => 'foxyapi', 'uses' => 'FoxyApiController@handleProviderCallback']);
+Route::get('foxyapi_callback', ['as' => 'foxyapi', 'uses' => 'FoxyApiController@handleProviderCallback']);
 
 Route::controllers([
     'auth'     => 'Auth\AuthController',

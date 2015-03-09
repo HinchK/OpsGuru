@@ -153,6 +153,7 @@ return [
         'OpsGuru\Providers\RouteServiceProvider',
         'Laravel\Socialite\SocialiteServiceProvider',
         'GrahamCampbell\GitHub\GitHubServiceProvider',
+        'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
 
     ],
 
@@ -208,6 +209,7 @@ return [
         'Debugbar'  => 'Barryvdh\Debugbar\Facade',
         'Socialize' => 'Laravel\Socialite\Facades\Socialite',
         'GitHub'    => 'GrahamCampbell\GitHub\Facades\GitHub',
+        'Cart'      => 'Gloudemans\Shoppingcart\Facades\Cart',
     ],
 
 ];

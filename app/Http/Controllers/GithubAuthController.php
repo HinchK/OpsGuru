@@ -10,6 +10,7 @@ class GithubAuthController extends Controller
     public function login()
     {
         info("authenticating with GitHub via Socialize");
+
         return Socialize::with('github')->scopes(['user', 'repo', 'gist'])->redirect();
     }
 

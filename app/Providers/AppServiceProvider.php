@@ -11,7 +11,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $socialite = $this->app->make('Laravel\Socialite\Contracts\Factory');
+        $socialite->extend(
+            'foxyapi',
+            function ($app) use ($socialite) {
+                $config = $app['config']['services.foxyapi'];
+                return $socialite->buildProvider(FoxyApiProvider::class, $config);
+            }
+        );
     }
 
     /**

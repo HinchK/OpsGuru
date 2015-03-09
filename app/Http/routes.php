@@ -19,6 +19,10 @@ Route::get('home', 'HomeController@index');
 
 Route::get('login', ['as' => 'login_path', 'uses' => 'GithubAuthController@login']);
 
+$router->get('foxyapi/login', ['as' => 'foxyapi/login', 'uses' => 'FoxyApiController@redirectToProvider']);
+
+$router->get('foxyapi_callback', ['as' => 'foxyapi', 'uses' => 'FoxyApiController@handleProviderCallback']);
+
 Route::controllers([
     'auth'     => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',

@@ -1,7 +1,7 @@
 <?php
 /**
  * An helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.0.5 on 2015-02-16.
+ * Generated for Laravel 5.0.13 on 2015-02-27.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -31,6 +31,41 @@ namespace {
          */
         public static function bootstrapWith($bootstrappers){
             \Illuminate\Foundation\Application::bootstrapWith($bootstrappers);
+        }
+        
+        /**
+         * Register a callback to run after loading the environment.
+         *
+         * @param \Closure $callback
+         * @return void 
+         * @static 
+         */
+        public static function afterLoadingEnvironment($callback){
+            \Illuminate\Foundation\Application::afterLoadingEnvironment($callback);
+        }
+        
+        /**
+         * Register a callback to run after a bootstrapper.
+         *
+         * @param string $bootstrapper
+         * @param \Closure $callback
+         * @return void 
+         * @static 
+         */
+        public static function beforeBootstrapping($bootstrapper, $callback){
+            \Illuminate\Foundation\Application::beforeBootstrapping($bootstrapper, $callback);
+        }
+        
+        /**
+         * Register a callback to run after a bootstrapper.
+         *
+         * @param string $bootstrapper
+         * @param \Closure $callback
+         * @return void 
+         * @static 
+         */
+        public static function afterBootstrapping($bootstrapper, $callback){
+            \Illuminate\Foundation\Application::afterBootstrapping($bootstrapper, $callback);
         }
         
         /**
@@ -1468,7 +1503,7 @@ namespace {
         /**
          * Register a custom Blade compiler.
          *
-         * @param \Closure $compiler
+         * @param callable $compiler
          * @return void 
          * @static 
          */
@@ -5223,7 +5258,7 @@ namespace {
          *
          * @param string $key
          * @param mixed $default
-         * @return string 
+         * @return string|array 
          * @static 
          */
         public static function input($key = null, $default = null){
@@ -7852,7 +7887,7 @@ namespace {
          *
          * @param string $key
          * @param mixed $default
-         * @return string 
+         * @return string|array 
          * @static 
          */
         public static function input($key = null, $default = null){
@@ -9526,6 +9561,17 @@ namespace {
         }
         
         /**
+         * Gather the middleware for the given route.
+         *
+         * @param \Illuminate\Routing\Route $route
+         * @return array 
+         * @static 
+         */
+        public static function gatherRouteMiddlewares($route){
+            return \Illuminate\Routing\Router::gatherRouteMiddlewares($route);
+        }
+        
+        /**
          * Register a route matched event listener.
          *
          * @param string|callable $callback
@@ -10812,6 +10858,7 @@ namespace {
          * @param mixed $parameters
          * @param bool $absolute
          * @return string 
+         * @throws \InvalidArgumentException
          * @static 
          */
         public static function action($action, $parameters = array(), $absolute = true){
@@ -11952,6 +11999,17 @@ namespace {
          */
         public static function buildProvider($provider, $config){
             return \Laravel\Socialite\SocialiteManager::buildProvider($provider, $config);
+        }
+        
+        /**
+         * Format the Twitter server configuration.
+         *
+         * @param array $config
+         * @return array 
+         * @static 
+         */
+        public static function formatConfig($config){
+            return \Laravel\Socialite\SocialiteManager::formatConfig($config);
         }
         
         /**

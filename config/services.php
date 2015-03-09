@@ -40,4 +40,10 @@ return [
         'redirect'      => env('GITHUB_REDIRECT'),
     ],
 
+    'foxyapi' => [
+        'client_id'     => env('FOXY_CLIENT_ID'),
+        'client_secret' => env('FOXY_CLIENT_SECRET'),
+        'redirect'      => env('NEW_FOXY_REDIRECT'),
+    ],
+
 ];

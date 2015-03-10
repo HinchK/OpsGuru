@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('dashboard', 'DashboardController@index');
+
 Route::get('/', 'WelcomeController@index');
 
 Route::get('dash', 'GithubAuthController@handleProviderCallback');

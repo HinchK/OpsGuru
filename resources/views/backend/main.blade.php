@@ -56,5 +56,10 @@
 <script src="js/style.js"></script>
 <script src="js/admin.js"></script>
 
+<!-- FOXYCART -->
+<script src="//cdn.foxycart.com/eyopsguru/loader.js" async defer></script>
+<!-- /FOXYCART -->
+
+
 </body>
 </html>

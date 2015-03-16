@@ -21,6 +21,8 @@ Route::get('home', 'HomeController@index');
 
 Route::get('cart', 'DevCartController@index');
 
+Route::get('shop', 'DevShopController@index');
+
 Route::get('login', ['as' => 'login_path', 'uses' => 'GithubAuthController@login']);
 
 Route::get('foxyapi/login', ['as' => 'foxyapi/login', 'uses' => 'FoxyApiController@redirectToProvider']);

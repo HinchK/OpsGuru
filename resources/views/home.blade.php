@@ -38,6 +38,10 @@
                         <h2>Basic FoxyCart Example Skunkworks</h2>
                         <p>continue to <a href="/cart">cart</a></p>
                     </div>
+                    <div class='box-body pad'>
+                        <h2>Basic FoxyCart Shop</h2>
+                        <p>continue to <a href="/shop">shop</a></p>
+                    </div>
                 </div>
             </div>
         </div>

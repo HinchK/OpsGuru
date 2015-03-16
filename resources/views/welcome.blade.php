@@ -41,6 +41,7 @@
 				<div class="title">One does not simply</div>
 				<div class="quote">log, into OpsGuru</div>
                 <a href="{{ route('login_path') }}">Login with Github!</a>
+				<a href="/shop"><h4>DevShop Enter Here</h4></a>
 			</div>
 		</div>
 	</body>

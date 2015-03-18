@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
 
                 return $socialite->buildProvider(new FoxyApiProvider(), $config);
                 // TODO: php 5.4 bandage
-                // return $socialite->buildProvider(FoxyApiProvider::class, $config);  
+                // return $socialite->buildProvider(FoxyApiProvider::class, $config);
             }
         );
     }

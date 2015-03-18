@@ -2,10 +2,9 @@
 
 use GrahamCampbell\GitHub\Facades\GitHub;
 use GrahamCampbell\GitHub\GitHubManager;
-use OpsGuru\Http\Requests;
 
-class DashboardController extends Controller {
-
+class DashboardController extends Controller
+{
     protected $github;
 
     public function __construct(GitHubManager $github)
@@ -13,11 +12,10 @@ class DashboardController extends Controller {
         $this->github = $github;
     }
 
-	public function index()
+    public function index()
     {
         $user = $this->github->me()->show();
 
         return view('backend.dashboard.index', compact('user'));
     }
-
 }

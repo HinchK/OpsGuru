@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Http\Controllers;
+<?php
+
+namespace OpsGuru\Http\Controllers;
 
 use GrahamCampbell\GitHub\Facades\GitHub;
 use GrahamCampbell\GitHub\GitHubManager;

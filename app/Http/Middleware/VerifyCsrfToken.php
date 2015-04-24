@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Http\Middleware;
+<?php
+
+namespace OpsGuru\Http\Middleware;
 
 use Closure;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;

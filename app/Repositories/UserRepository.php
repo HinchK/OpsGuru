@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Repositories;
+<?php
+
+namespace OpsGuru\Repositories;
 
 use OpsGuru\User;
 

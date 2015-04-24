@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Http\Controllers;
+<?php
+
+namespace OpsGuru\Http\Controllers;
 
 use Auth;
 use GrahamCampbell\GitHub\Facades\GitHub;
@@ -9,7 +11,7 @@ class GithubAuthController extends Controller
 {
     public function login()
     {
-        info("authenticating with GitHub via Socialize");
+        info('authenticating with GitHub via Socialize');
 
         return Socialize::with('github')->scopes(['user', 'repo', 'gist'])->redirect();
     }
@@ -24,14 +26,14 @@ class GithubAuthController extends Controller
     {
         $user = Socialize::with('github')->user();
 
-        info("handling provider callback");
-        info($user->getName()." | ".$user->getNickName());
-        info("Token: ".$user->token);
+        info('handling provider callback');
+        info($user->getName().' | '.$user->getNickName());
+        info('Token: '.$user->token);
 
         $orgs = Github::me()->organizations();
 
         foreach ($orgs as $org) {
-            info("Github Orgs lookup: ".$org['login']);
+            info('Github Orgs lookup: '.$org['login']);
             if ($org['login'] === 'FoxyCart') {
                 info('FoxyCart user verified...');
                 $opsUser = $repository->findByUsernameOrCreate($user);

@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Providers;
+<?php
+
+namespace OpsGuru\Providers;
 
 use Laravel\Socialite\Two\AbstractProvider;
 use Laravel\Socialite\Two\ProviderInterface;

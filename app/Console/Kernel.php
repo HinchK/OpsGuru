@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Console;
+<?php
+
+namespace OpsGuru\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

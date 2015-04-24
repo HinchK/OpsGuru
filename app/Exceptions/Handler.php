@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Exceptions;
+<?php
+
+namespace OpsGuru\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

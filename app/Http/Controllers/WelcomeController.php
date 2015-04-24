@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Http\Controllers;
+<?php
+
+namespace OpsGuru\Http\Controllers;
 
 class WelcomeController extends Controller
 {

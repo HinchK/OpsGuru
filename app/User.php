@@ -1,4 +1,6 @@
-<?php namespace OpsGuru;
+<?php
+
+namespace OpsGuru;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;

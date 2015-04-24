@@ -1,0 +1,556 @@
+diff --git a/app/Commands/Command.php b/app/Commands/Command.php
+index 00d4b17fda2e699410bdc4e373b38204f33fef00..bd91ca41bd3764d8e0d63d5ffc3b360a4a474213 100644
+--- a/app/Commands/Command.php
++++ b/app/Commands/Command.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Commands;
++<?php
++
++namespace OpsGuru\Commands;
+ 
+ abstract class Command
+ {
+diff --git a/app/Console/Commands/Inspire.php b/app/Console/Commands/Inspire.php
+index b2fe1ae8d04f27fd85c95a974b519407e4027f67..98c0a9753d87b6eb5a7cb22a5bbe330eaccbb0bb 100644
+--- a/app/Console/Commands/Inspire.php
++++ b/app/Console/Commands/Inspire.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Console\Commands;
++<?php
++
++namespace OpsGuru\Console\Commands;
+ 
+ use Illuminate\Console\Command;
+ use Illuminate\Foundation\Inspiring;
+diff --git a/app/Console/Kernel.php b/app/Console/Kernel.php
+index 867e1582665422d3cdb4d50bce9e1ed4cce1120f..60b59918cdd906b69a75f4a7a47c7d74b096a511 100644
+--- a/app/Console/Kernel.php
++++ b/app/Console/Kernel.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Console;
++<?php
++
++namespace OpsGuru\Console;
+ 
+ use Illuminate\Console\Scheduling\Schedule;
+ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+diff --git a/app/Events/Event.php b/app/Events/Event.php
+index 150d4832f7bf3238ccabe3e3eb899ad1db743e91..3c48d0c60c2a369f9b674dc96395a19b762ecc18 100644
+--- a/app/Events/Event.php
++++ b/app/Events/Event.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Events;
++<?php
++
++namespace OpsGuru\Events;
+ 
+ abstract class Event
+ {
+diff --git a/app/Exceptions/Handler.php b/app/Exceptions/Handler.php
+index e715ffc89732204575bad739822d64754198ee57..8243d1069e2b2e5479ab7cb2963d9f1dd56942e0 100644
+--- a/app/Exceptions/Handler.php
++++ b/app/Exceptions/Handler.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Exceptions;
++<?php
++
++namespace OpsGuru\Exceptions;
+ 
+ use Exception;
+ use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+diff --git a/app/Http/Controllers/Auth/AuthController.php b/app/Http/Controllers/Auth/AuthController.php
+index 98d7f42bfc02c90474a57cbd43c32e3277cb520f..42738e2158717413ddcd7074327a0ea68e4a29b0 100644
+--- a/app/Http/Controllers/Auth/AuthController.php
++++ b/app/Http/Controllers/Auth/AuthController.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Controllers\Auth;
++<?php
++
++namespace OpsGuru\Http\Controllers\Auth;
+ 
+ use Illuminate\Contracts\Auth\Guard;
+ use Illuminate\Contracts\Auth\Registrar;
+diff --git a/app/Http/Controllers/Auth/PasswordController.php b/app/Http/Controllers/Auth/PasswordController.php
+index 570f4dc351bfb11e47e94a6ad7978600eb0b28c9..0ff9cf96aca028868cd570063c5e5baed669bb86 100644
+--- a/app/Http/Controllers/Auth/PasswordController.php
++++ b/app/Http/Controllers/Auth/PasswordController.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Controllers\Auth;
++<?php
++
++namespace OpsGuru\Http\Controllers\Auth;
+ 
+ use Illuminate\Contracts\Auth\Guard;
+ use Illuminate\Contracts\Auth\PasswordBroker;
+diff --git a/app/Http/Controllers/Controller.php b/app/Http/Controllers/Controller.php
+index e3e09895a04f4a03de1d90ec1e365f5ce6d69370..abf2e5bf507451c2a199536c9435c1269923c6b1 100644
+--- a/app/Http/Controllers/Controller.php
++++ b/app/Http/Controllers/Controller.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Controllers;
++<?php
++
++namespace OpsGuru\Http\Controllers;
+ 
+ use Illuminate\Foundation\Bus\DispatchesCommands;
+ use Illuminate\Foundation\Validation\ValidatesRequests;
+diff --git a/app/Http/Controllers/DashboardController.php b/app/Http/Controllers/DashboardController.php
+index a71522d5e02c8998c08fac7715fac027a4b8ca5f..3f08bc944a6e48d98a88e88303da115dc8e84af6 100644
+--- a/app/Http/Controllers/DashboardController.php
++++ b/app/Http/Controllers/DashboardController.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Controllers;
++<?php
++
++namespace OpsGuru\Http\Controllers;
+ 
+ use GrahamCampbell\GitHub\Facades\GitHub;
+ use GrahamCampbell\GitHub\GitHubManager;
+diff --git a/app/Http/Controllers/DevCartController.php b/app/Http/Controllers/DevCartController.php
+index 996c77a1f61acdf22814207ff8dd34c2cc4188d2..c74a198c090a4412d985ce8e5b25d27e14abdb65 100644
+--- a/app/Http/Controllers/DevCartController.php
++++ b/app/Http/Controllers/DevCartController.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Controllers;
++<?php
++
++namespace OpsGuru\Http\Controllers;
+ 
+ use Gloudemans\Shoppingcart\Facades\Cart;
+ 
+diff --git a/app/Http/Controllers/DevShopController.php b/app/Http/Controllers/DevShopController.php
+index 5bbc94ef18efdd1a7e8ab244d72a49ca616dc019..05d2d595c0c91448189977b8953a690b303af087 100644
+--- a/app/Http/Controllers/DevShopController.php
++++ b/app/Http/Controllers/DevShopController.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Controllers;
++<?php
++
++namespace OpsGuru\Http\Controllers;
+ 
+ class DevShopController extends Controller
+ {
+diff --git a/app/Http/Controllers/FoxyApiController.php b/app/Http/Controllers/FoxyApiController.php
+index dbd087676c2250dca6983ce43f4b0e3482710d5e..aa1b052c8c018be8b5620ca151723b720e63f0c3 100644
+--- a/app/Http/Controllers/FoxyApiController.php
++++ b/app/Http/Controllers/FoxyApiController.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Controllers;
++<?php
++
++namespace OpsGuru\Http\Controllers;
+ 
+ use Socialize;
+ 
+diff --git a/app/Http/Controllers/GithubAuthController.php b/app/Http/Controllers/GithubAuthController.php
+index 586ece7e94da28bff3121a7736afe03e63a9cf8b..eab3371c2a8aa3929a8c2920d61b82a9bcb4a8c0 100644
+--- a/app/Http/Controllers/GithubAuthController.php
++++ b/app/Http/Controllers/GithubAuthController.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Controllers;
++<?php
++
++namespace OpsGuru\Http\Controllers;
+ 
+ use Auth;
+ use GrahamCampbell\GitHub\Facades\GitHub;
+@@ -9,7 +11,7 @@ class GithubAuthController extends Controller
+ {
+     public function login()
+     {
+-        info("authenticating with GitHub via Socialize");
++        info('authenticating with GitHub via Socialize');
+ 
+         return Socialize::with('github')->scopes(['user', 'repo', 'gist'])->redirect();
+     }
+@@ -24,14 +26,14 @@ class GithubAuthController extends Controller
+     {
+         $user = Socialize::with('github')->user();
+ 
+-        info("handling provider callback");
+-        info($user->getName()." | ".$user->getNickName());
+-        info("Token: ".$user->token);
++        info('handling provider callback');
++        info($user->getName().' | '.$user->getNickName());
++        info('Token: '.$user->token);
+ 
+         $orgs = Github::me()->organizations();
+ 
+         foreach ($orgs as $org) {
+-            info("Github Orgs lookup: ".$org['login']);
++            info('Github Orgs lookup: '.$org['login']);
+             if ($org['login'] === 'FoxyCart') {
+                 info('FoxyCart user verified...');
+                 $opsUser = $repository->findByUsernameOrCreate($user);
+diff --git a/app/Http/Controllers/HomeController.php b/app/Http/Controllers/HomeController.php
+index 0ffc44ea873b6536607372f8af9262f44a358983..4088d1954317b59584f9635feb411e0d1cc8027a 100644
+--- a/app/Http/Controllers/HomeController.php
++++ b/app/Http/Controllers/HomeController.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Controllers;
++<?php
++
++namespace OpsGuru\Http\Controllers;
+ 
+ class HomeController extends Controller
+ {
+diff --git a/app/Http/Controllers/WelcomeController.php b/app/Http/Controllers/WelcomeController.php
+index 6e98b4acb34218efadf236340a14ae1a965ef30f..3edbde583e06867d1d20592ee8fe8a0a63b7629d 100644
+--- a/app/Http/Controllers/WelcomeController.php
++++ b/app/Http/Controllers/WelcomeController.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Controllers;
++<?php
++
++namespace OpsGuru\Http\Controllers;
+ 
+ class WelcomeController extends Controller
+ {
+diff --git a/app/Http/Kernel.php b/app/Http/Kernel.php
+index 7365cb26763b5e46bbe67863e5ed70f7248cf5d5..603196fa459552813e1c494b0c3917f2fe978278 100644
+--- a/app/Http/Kernel.php
++++ b/app/Http/Kernel.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http;
++<?php
++
++namespace OpsGuru\Http;
+ 
+ use Illuminate\Foundation\Http\Kernel as HttpKernel;
+ 
+diff --git a/app/Http/Middleware/Authenticate.php b/app/Http/Middleware/Authenticate.php
+index 34889a0aa80f03adc22880e261273ea2911a186e..159d0b55c50918c81a8d315413f2f6284d37e750 100644
+--- a/app/Http/Middleware/Authenticate.php
++++ b/app/Http/Middleware/Authenticate.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Middleware;
++<?php
++
++namespace OpsGuru\Http\Middleware;
+ 
+ use Closure;
+ use Illuminate\Contracts\Auth\Guard;
+diff --git a/app/Http/Middleware/RedirectIfAuthenticated.php b/app/Http/Middleware/RedirectIfAuthenticated.php
+index b69534293cc4e0117dd4217e3eecae1f4944659b..cf9255319c5177df960b3067b59292f65986f600 100644
+--- a/app/Http/Middleware/RedirectIfAuthenticated.php
++++ b/app/Http/Middleware/RedirectIfAuthenticated.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Middleware;
++<?php
++
++namespace OpsGuru\Http\Middleware;
+ 
+ use Closure;
+ use Illuminate\Contracts\Auth\Guard;
+diff --git a/app/Http/Middleware/VerifyCsrfToken.php b/app/Http/Middleware/VerifyCsrfToken.php
+index 57fb94f6337f416bce16b990c09652d231f6c3cd..111c69c4abd770ff4c62769ce8d18b88c779efd8 100644
+--- a/app/Http/Middleware/VerifyCsrfToken.php
++++ b/app/Http/Middleware/VerifyCsrfToken.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Middleware;
++<?php
++
++namespace OpsGuru\Http\Middleware;
+ 
+ use Closure;
+ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
+diff --git a/app/Http/Requests/Request.php b/app/Http/Requests/Request.php
+index 2f9f81b5415e8986cfee88fee7ca7630ee1f0848..ced4dd7d4b05d5af2c73dae8d425cb127bf56260 100644
+--- a/app/Http/Requests/Request.php
++++ b/app/Http/Requests/Request.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Http\Requests;
++<?php
++
++namespace OpsGuru\Http\Requests;
+ 
+ use Illuminate\Foundation\Http\FormRequest;
+ 
+diff --git a/app/Providers/AppServiceProvider.php b/app/Providers/AppServiceProvider.php
+index 07f45bd305290f69f677f839117fa6ca28d7b940..df5d0082a441d05ad5bf5c79641d8ca27d5dac3a 100644
+--- a/app/Providers/AppServiceProvider.php
++++ b/app/Providers/AppServiceProvider.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Providers;
++<?php
++
++namespace OpsGuru\Providers;
+ 
+ use Illuminate\Support\ServiceProvider;
+ 
+diff --git a/app/Providers/BusServiceProvider.php b/app/Providers/BusServiceProvider.php
+index 3db08b6aecd5cfd713b56ed5b5c09f7348a6ad8b..a26f1ed4b1b0e53f6e9f33f47629591133246da0 100644
+--- a/app/Providers/BusServiceProvider.php
++++ b/app/Providers/BusServiceProvider.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Providers;
++<?php
++
++namespace OpsGuru\Providers;
+ 
+ use Illuminate\Bus\Dispatcher;
+ use Illuminate\Support\ServiceProvider;
+diff --git a/app/Providers/ConfigServiceProvider.php b/app/Providers/ConfigServiceProvider.php
+index 24225a8a6faa2020c036f4b7b658158fdea517bf..c9adb943c5a07431fd361e892555d9027de25b94 100644
+--- a/app/Providers/ConfigServiceProvider.php
++++ b/app/Providers/ConfigServiceProvider.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Providers;
++<?php
++
++namespace OpsGuru\Providers;
+ 
+ use Illuminate\Support\ServiceProvider;
+ 
+diff --git a/app/Providers/EventServiceProvider.php b/app/Providers/EventServiceProvider.php
+index 957d7790fafca2877505ba5d2362bdc77ef7b39a..0f09ca696fcf432bf69224e3e7d413e8b27cdc37 100644
+--- a/app/Providers/EventServiceProvider.php
++++ b/app/Providers/EventServiceProvider.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Providers;
++<?php
++
++namespace OpsGuru\Providers;
+ 
+ use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
+ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+diff --git a/app/Providers/FoxyApiProvider.php b/app/Providers/FoxyApiProvider.php
+index 0e48d0ccc99f3216490d39fe8c814c361999dab8..4d9318a4683baa67d94b3c86089efb7c36f4d3c1 100644
+--- a/app/Providers/FoxyApiProvider.php
++++ b/app/Providers/FoxyApiProvider.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Providers;
++<?php
++
++namespace OpsGuru\Providers;
+ 
+ use Laravel\Socialite\Two\AbstractProvider;
+ use Laravel\Socialite\Two\ProviderInterface;
+diff --git a/app/Providers/RouteServiceProvider.php b/app/Providers/RouteServiceProvider.php
+index 3839c21fb4a19db8fa7903e67478c688dc0e94f5..d927c5b9ec56c2f451179df90364d11f5e519d5b 100644
+--- a/app/Providers/RouteServiceProvider.php
++++ b/app/Providers/RouteServiceProvider.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Providers;
++<?php
++
++namespace OpsGuru\Providers;
+ 
+ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+ use Illuminate\Routing\Router;
+diff --git a/app/Repositories/UserRepository.php b/app/Repositories/UserRepository.php
+index a6a62e5d549d302dfc53eed976494e4452fad359..b534c8fd602c0a5882354483b8c3e9a75aef3d7c 100644
+--- a/app/Repositories/UserRepository.php
++++ b/app/Repositories/UserRepository.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Repositories;
++<?php
++
++namespace OpsGuru\Repositories;
+ 
+ use OpsGuru\User;
+ 
+diff --git a/app/Services/Registrar.php b/app/Services/Registrar.php
+index 66720b9fb32836f616ad394dffca2709d5b7c790..51c5dad27a3f1a23136d192a2d0b65cb06275301 100644
+--- a/app/Services/Registrar.php
++++ b/app/Services/Registrar.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru\Services;
++<?php
++
++namespace OpsGuru\Services;
+ 
+ use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
+ use OpsGuru\User;
+diff --git a/app/User.php b/app/User.php
+index 262d5b6af7fc9fc593a33330576bc29ea99f8e36..5ada0bf0081d70b4f4a1ac7b06428c5bf2a030fa 100644
+--- a/app/User.php
++++ b/app/User.php
+@@ -1,4 +1,6 @@
+-<?php namespace OpsGuru;
++<?php
++
++namespace OpsGuru;
+ 
+ use Illuminate\Auth\Authenticatable;
+ use Illuminate\Auth\Passwords\CanResetPassword;
+diff --git a/config/debugbar.php b/config/debugbar.php
+index 2aeeebab32953a98757b0e3fe43d755a4fad7674..b95178b5784a96f7e4b4d943ed937f0c2d2af903 100644
+--- a/config/debugbar.php
++++ b/config/debugbar.php
+@@ -108,7 +108,7 @@ return [
+             'with_params'       => true,   // Render SQL with the parameters substituted
+             'timeline'          => false,  // Add the queries to the timeline
+             'backtrace'         => false,  // EXPERIMENTAL: Use a backtrace to find the origin of the query in your files.
+-            'explain'           => [            // EXPERIMENTAL: Show EXPLAIN output on queries
++            'explain'           => [// EXPERIMENTAL: Show EXPLAIN output on queries
+                 'enabled' => false,
+                 'types'   => ['SELECT'], // array('SELECT', 'INSERT', 'UPDATE', 'DELETE'); for MySQL 5.6.3+
+             ],
+diff --git a/public/index.php b/public/index.php
+index 79772fd61169e3d83262639d2b011b7ed90d722f..fd0cae1fc50b3cd54c7d73034b3676e23ce06057 100644
+--- a/public/index.php
++++ b/public/index.php
+@@ -1,4 +1,5 @@
+ <?php
++
+ /**
+  * Laravel - A PHP Framework For Web Artisans.
+  *
+diff --git a/resources/lang/en/passwords.php b/resources/lang/en/passwords.php
+index 50dfd5d15b0e787e1ddfbc62a323c5f60344aab1..195340ae47d3f2a8b325b73bcc2daed818cff551 100644
+--- a/resources/lang/en/passwords.php
++++ b/resources/lang/en/passwords.php
+@@ -13,10 +13,10 @@ return [
+     |
+     */
+ 
+-    "password" => "Passwords must be at least six characters and match the confirmation.",
+-    "user"     => "We can't find a user with that e-mail address.",
+-    "token"    => "This password reset token is invalid.",
+-    "sent"     => "We have e-mailed your password reset link!",
+-    "reset"    => "Your password has been reset!",
++    'password' => 'Passwords must be at least six characters and match the confirmation.',
++    'user'     => "We can't find a user with that e-mail address.",
++    'token'    => 'This password reset token is invalid.',
++    'sent'     => 'We have e-mailed your password reset link!',
++    'reset'    => 'Your password has been reset!',
+ 
+ ];
+diff --git a/resources/lang/en/validation.php b/resources/lang/en/validation.php
+index ecc9e3720c0b01966d31d3767a128c46f97afc5f..ff1c087755dc14aa1292ac1bd5134a199ee6b0b8 100644
+--- a/resources/lang/en/validation.php
++++ b/resources/lang/en/validation.php
+@@ -13,66 +13,66 @@ return [
+     |
+     */
+ 
+-    "accepted"             => "The :attribute must be accepted.",
+-    "active_url"           => "The :attribute is not a valid URL.",
+-    "after"                => "The :attribute must be a date after :date.",
+-    "alpha"                => "The :attribute may only contain letters.",
+-    "alpha_dash"           => "The :attribute may only contain letters, numbers, and dashes.",
+-    "alpha_num"            => "The :attribute may only contain letters and numbers.",
+-    "array"                => "The :attribute must be an array.",
+-    "before"               => "The :attribute must be a date before :date.",
+-    "between"              => [
+-        "numeric" => "The :attribute must be between :min and :max.",
+-        "file"    => "The :attribute must be between :min and :max kilobytes.",
+-        "string"  => "The :attribute must be between :min and :max characters.",
+-        "array"   => "The :attribute must have between :min and :max items.",
++    'accepted'             => 'The :attribute must be accepted.',
++    'active_url'           => 'The :attribute is not a valid URL.',
++    'after'                => 'The :attribute must be a date after :date.',
++    'alpha'                => 'The :attribute may only contain letters.',
++    'alpha_dash'           => 'The :attribute may only contain letters, numbers, and dashes.',
++    'alpha_num'            => 'The :attribute may only contain letters and numbers.',
++    'array'                => 'The :attribute must be an array.',
++    'before'               => 'The :attribute must be a date before :date.',
++    'between'              => [
++        'numeric' => 'The :attribute must be between :min and :max.',
++        'file'    => 'The :attribute must be between :min and :max kilobytes.',
++        'string'  => 'The :attribute must be between :min and :max characters.',
++        'array'   => 'The :attribute must have between :min and :max items.',
+     ],
+-    "boolean"              => "The :attribute field must be true or false.",
+-    "confirmed"            => "The :attribute confirmation does not match.",
+-    "date"                 => "The :attribute is not a valid date.",
+-    "date_format"          => "The :attribute does not match the format :format.",
+-    "different"            => "The :attribute and :other must be different.",
+-    "digits"               => "The :attribute must be :digits digits.",
+-    "digits_between"       => "The :attribute must be between :min and :max digits.",
+-    "email"                => "The :attribute must be a valid email address.",
+-    "filled"               => "The :attribute field is required.",
+-    "exists"               => "The selected :attribute is invalid.",
+-    "image"                => "The :attribute must be an image.",
+-    "in"                   => "The selected :attribute is invalid.",
+-    "integer"              => "The :attribute must be an integer.",
+-    "ip"                   => "The :attribute must be a valid IP address.",
+-    "max"                  => [
+-        "numeric" => "The :attribute may not be greater than :max.",
+-        "file"    => "The :attribute may not be greater than :max kilobytes.",
+-        "string"  => "The :attribute may not be greater than :max characters.",
+-        "array"   => "The :attribute may not have more than :max items.",
++    'boolean'              => 'The :attribute field must be true or false.',
++    'confirmed'            => 'The :attribute confirmation does not match.',
++    'date'                 => 'The :attribute is not a valid date.',
++    'date_format'          => 'The :attribute does not match the format :format.',
++    'different'            => 'The :attribute and :other must be different.',
++    'digits'               => 'The :attribute must be :digits digits.',
++    'digits_between'       => 'The :attribute must be between :min and :max digits.',
++    'email'                => 'The :attribute must be a valid email address.',
++    'filled'               => 'The :attribute field is required.',
++    'exists'               => 'The selected :attribute is invalid.',
++    'image'                => 'The :attribute must be an image.',
++    'in'                   => 'The selected :attribute is invalid.',
++    'integer'              => 'The :attribute must be an integer.',
++    'ip'                   => 'The :attribute must be a valid IP address.',
++    'max'                  => [
++        'numeric' => 'The :attribute may not be greater than :max.',
++        'file'    => 'The :attribute may not be greater than :max kilobytes.',
++        'string'  => 'The :attribute may not be greater than :max characters.',
++        'array'   => 'The :attribute may not have more than :max items.',
+     ],
+-    "mimes"                => "The :attribute must be a file of type: :values.",
+-    "min"                  => [
+-        "numeric" => "The :attribute must be at least :min.",
+-        "file"    => "The :attribute must be at least :min kilobytes.",
+-        "string"  => "The :attribute must be at least :min characters.",
+-        "array"   => "The :attribute must have at least :min items.",
++    'mimes'                => 'The :attribute must be a file of type: :values.',
++    'min'                  => [
++        'numeric' => 'The :attribute must be at least :min.',
++        'file'    => 'The :attribute must be at least :min kilobytes.',
++        'string'  => 'The :attribute must be at least :min characters.',
++        'array'   => 'The :attribute must have at least :min items.',
+     ],
+-    "not_in"               => "The selected :attribute is invalid.",
+-    "numeric"              => "The :attribute must be a number.",
+-    "regex"                => "The :attribute format is invalid.",
+-    "required"             => "The :attribute field is required.",
+-    "required_if"          => "The :attribute field is required when :other is :value.",
+-    "required_with"        => "The :attribute field is required when :values is present.",
+-    "required_with_all"    => "The :attribute field is required when :values is present.",
+-    "required_without"     => "The :attribute field is required when :values is not present.",
+-    "required_without_all" => "The :attribute field is required when none of :values are present.",
+-    "same"                 => "The :attribute and :other must match.",
+-    "size"                 => [
+-        "numeric" => "The :attribute must be :size.",
+-        "file"    => "The :attribute must be :size kilobytes.",
+-        "string"  => "The :attribute must be :size characters.",
+-        "array"   => "The :attribute must contain :size items.",
++    'not_in'               => 'The selected :attribute is invalid.',
++    'numeric'              => 'The :attribute must be a number.',
++    'regex'                => 'The :attribute format is invalid.',
++    'required'             => 'The :attribute field is required.',
++    'required_if'          => 'The :attribute field is required when :other is :value.',
++    'required_with'        => 'The :attribute field is required when :values is present.',
++    'required_with_all'    => 'The :attribute field is required when :values is present.',
++    'required_without'     => 'The :attribute field is required when :values is not present.',
++    'required_without_all' => 'The :attribute field is required when none of :values are present.',
++    'same'                 => 'The :attribute and :other must match.',
++    'size'                 => [
++        'numeric' => 'The :attribute must be :size.',
++        'file'    => 'The :attribute must be :size kilobytes.',
++        'string'  => 'The :attribute must be :size characters.',
++        'array'   => 'The :attribute must contain :size items.',
+     ],
+-    "unique"               => "The :attribute has already been taken.",
+-    "url"                  => "The :attribute format is invalid.",
+-    "timezone"             => "The :attribute must be a valid zone.",
++    'unique'               => 'The :attribute has already been taken.',
++    'url'                  => 'The :attribute format is invalid.',
++    'timezone'             => 'The :attribute must be a valid zone.',
+ 
+     /*
+     |--------------------------------------------------------------------------
+diff --git a/server.php b/server.php
+index b8cec5a04987989b4e2306e85b7145d5b536ceb9..7f6bfe31707482a7a209e6ba23d5e1502c96deb6 100644
+--- a/server.php
++++ b/server.php
+@@ -1,4 +1,5 @@
+ <?php
++
+ /**
+  * Laravel - A PHP Framework For Web Artisans.
+  *

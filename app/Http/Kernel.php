@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Http;
+<?php
+
+namespace OpsGuru\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 

@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Providers;
+<?php
+
+namespace OpsGuru\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Routing\Router;

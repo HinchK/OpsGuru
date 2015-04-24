@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Commands;
+<?php
+
+namespace OpsGuru\Commands;
 
 abstract class Command
 {

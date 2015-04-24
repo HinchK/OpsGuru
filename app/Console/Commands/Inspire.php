@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Console\Commands;
+<?php
+
+namespace OpsGuru\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

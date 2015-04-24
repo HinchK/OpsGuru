@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Http\Controllers;
+<?php
+
+namespace OpsGuru\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Foundation\Validation\ValidatesRequests;

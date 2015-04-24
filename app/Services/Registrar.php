@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Services;
+<?php
+
+namespace OpsGuru\Services;
 
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 use OpsGuru\User;

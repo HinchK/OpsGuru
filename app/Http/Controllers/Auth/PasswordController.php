@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Http\Controllers\Auth;
+<?php
+
+namespace OpsGuru\Http\Controllers\Auth;
 
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\PasswordBroker;

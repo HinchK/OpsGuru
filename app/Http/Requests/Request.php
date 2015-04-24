@@ -1,4 +1,6 @@
-<?php namespace OpsGuru\Http\Requests;
+<?php
+
+namespace OpsGuru\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
